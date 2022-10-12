@@ -6,12 +6,11 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:48 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/12 16:00:43 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/12 16:02:30 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
