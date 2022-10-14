@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:19 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/12 11:09:22 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/14 12:45:00 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	nbrlen(int n)
 }
 char	*ft_itoa(int n)
 {
-	int	i;
-	int	size;
-	char	*str;
+	int			i;
+	int			size;
+	char		*str;
 	long int	x ;
 
 	x = (long int )n;
