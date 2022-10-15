@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:36 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/12 14:49:03 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/15 13:04:12 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	if (!s || !fd)
+	if (s == 0 || fd == 0)
 		return ;
 	while (s[i])
 	{

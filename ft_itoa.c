@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:19 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/14 12:45:00 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/15 09:29:38 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	nbrlen(int n)
 	}
 	return (cnt);
 }
+
 char	*ft_itoa(int n)
 {
 	int			i;
