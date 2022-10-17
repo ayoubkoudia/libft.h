@@ -6,21 +6,24 @@
 #    By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 11:28:05 by akoudia           #+#    #+#              #
-#    Updated: 2022/10/05 13:18:13 by akoudia          ###   ########.fr        #
+#    Updated: 2022/10/17 09:36:50 by akoudia          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= $(wildcard ft_*.c)
+SRCS		= $(wildcard ft_*.c)
 
-OBJS	= $(SRCS:.c=.o)
+SRCS_BONUS 	= $(wildcard ft_*_bonus.c)
 
-NAME	= libft.a
+OBJS		= $(SRCS:.c=.o)
+OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
-CC		= gcc
+NAME		= libft.a
 
-CFLAGS	= -Wall -Wextra -Werror
+CC			= gcc
 
-RM		= rm -f
+CFLAGS		= -Wall -Wextra -Werror
+
+RM			= rm -f
 
 %.o : %.c
 			$(CC) $(CFLAGS) -c $< -o $(<:c=o)
@@ -31,8 +34,11 @@ $(NAME):	$(OBJS)
 
 all:		$(NAME)
 
+bonus: 		$(NAME) $(OBJS_BONUS)
+			ar rcs $(NAME) $(OBJS_BONUS)
+
 clean:
-			$(RM) $(OBJS)
+			$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean:		clean
 			$(RM) $(NAME)

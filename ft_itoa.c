@@ -6,53 +6,56 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:19 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/15 09:29:38 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/17 09:25:13 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nbrlen(int n)
+int	neg(long int nb)
 {
-	int	cnt;
+	if (nb < 0)
+		return (-nb);
+	return (nb);
+}
 
-	cnt = 0;
-	if (n <= 0)
-		cnt++;
-	while (n)
+int	nblen(int nbr)
+{
+	int	len;
+
+	len = 0;
+	if (nbr <= 0)
+		len = len + 1;
+	while (nbr != 0)
 	{
-		cnt++;
-		n /= 10;
+		nbr = nbr / 10;
+		len++;
 	}
-	return (cnt);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	int			i;
-	int			size;
-	char		*str;
-	long int	x ;
+	int		len;
+	int		sign;
+	char	*str;
 
-	x = (long int )n;
-	size = nbrlen(x);
-	i = size - 1;
-	str = malloc(sizeof(char) * (size + 1));
-	if (!str)
-		return (0);
-	if (x == 0)
-		str[0] = x + 48;
-	if (x < 0)
+	sign = 1;
+	if (n < 0)
+		sign = sign * -1;
+	len = nblen(n);
+	str = (char *)malloc(sizeof(char) * len + 1);
+	if (str == 0)
+		return (NULL);
+	str[len] = '\0';
+	len--;
+	while (len >= 0)
 	{
+		str[len] = '0' + neg(n % 10);
+		n = neg(n / 10);
+		len--;
+	}
+	if (sign < 0)
 		str[0] = '-';
-		x = -x;
-	}
-	while (x)
-	{
-		str[i] = (x % 10) + 48;
-		x = x / 10;
-		i--;
-	}
-	str[size] = '\0';
 	return (str);
 }
