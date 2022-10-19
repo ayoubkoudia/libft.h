@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:28:53 by yelaissa          #+#    #+#             */
-/*   Updated: 2022/10/19 15:41:23 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/19 15:46:48 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*curr;
 
-	if (!lst)
+	if (lst == 0)
 		return ;
 	curr = lst;
 	while (curr)

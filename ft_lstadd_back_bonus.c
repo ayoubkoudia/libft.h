@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:12:44 by yelaissa          #+#    #+#             */
-/*   Updated: 2022/10/19 15:41:13 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/19 15:46:17 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*lastnode;
 
-	if (!lst || !new)
+	if (lst == 0 || new == 0)
 		return ;
-	if (!*lst)
+	if (*lst == 0)
 	{
 		*lst = new;
 		return ;

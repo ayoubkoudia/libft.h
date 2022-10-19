@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:28:53 by yelaissa          #+#    #+#             */
-/*   Updated: 2022/10/19 15:41:32 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/19 15:47:09 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		newnode = ft_lstnew(f(lst->content));
-		if (!newnode)
+		if (newnode == 0)
 		{
 			ft_lstclear(&newlst, del);
 			return (NULL);
