@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:48 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/17 09:32:31 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/17 14:27:03 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*str;
 
-	if (!s)
+	if (s == 0)
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!str)
+	if (str == 0)
 		return (NULL);
 	i = 0;
 	while (s[i])

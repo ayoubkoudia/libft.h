@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:39 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/17 12:26:06 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:51:21 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_countdest(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s[i])
+	if (s[i] == 0)
 		return (0);
 	while (s[i] != '\0')
 	{
@@ -47,7 +47,7 @@ static char	*ft_filldest(char const *s, int i, int j)
 
 	n = 0;
 	dest = malloc(sizeof(char) * (i + 1));
-	if (!dest)
+	if (dest == 0)
 		return (0);
 	j = j - i;
 	while (i > 0)
@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	dest = malloc(sizeof(char *) * (ft_countdest(s, c) + 1));
-	if (!dest || !s)
+	if (dest == 0 || s == 0)
 		return (0);
 	while (s[i] != '\0')
 	{
@@ -87,21 +87,3 @@ char	**ft_split(char const *s, char c)
 	dest[j] = 0;
 	return (dest);
 }	
-
-/*int	main()
-{
-	char str[] = "";
-	char c = 'z';
-	printf("%s", ft_split(str, c)[0]);
-	printf("\n");
-	printf("%s", ft_split(str, c)[1]);
-        printf("\n");
-	printf("%s", ft_split(str, c)[2]);
-        printf("\n");
-	printf("%s", ft_split(str, c)[3]);
-        printf("\n");
-	printf("%s", ft_split(str, c)[4]);
-        printf("\n");
-	printf("%s", ft_split(str, c)[5]);
-        printf("\n");
-}*/
