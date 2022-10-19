@@ -5,9 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 09:46:29 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/17 09:47:14 by akoudia          ###   ########.fr       */
+/*   Created: 2022/10/08 12:28:53 by yelaissa          #+#    #+#             */
+/*   Updated: 2022/10/19 15:41:23 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	t_list	*curr;
+
+	if (!lst)
+		return ;
+	curr = lst;
+	while (curr)
+	{
+		f(curr->content);
+		curr = curr->next;
+	}
+}

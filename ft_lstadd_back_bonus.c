@@ -5,9 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 09:42:51 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/17 09:47:06 by akoudia          ###   ########.fr       */
+/*   Created: 2022/10/06 12:12:44 by yelaissa          #+#    #+#             */
+/*   Updated: 2022/10/19 15:41:13 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*lastnode;
+
+	if (!lst || !new)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	lastnode = ft_lstlast(*lst);
+	lastnode->next = new;
+}
