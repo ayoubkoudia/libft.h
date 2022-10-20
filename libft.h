@@ -6,17 +6,20 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:46:46 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/20 12:34:30 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/20 19:45:26 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-
+// ---------- to delete libs------------------
+# include <string.h>
+# include <stdio.h>
+#include <fcntl.h>
+//-------------------------------------------
 typedef struct s_list
 {
 	void			*content;
@@ -68,6 +71,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
