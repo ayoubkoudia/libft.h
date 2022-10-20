@@ -6,16 +6,16 @@
 #    By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 11:28:05 by akoudia           #+#    #+#              #
-#    Updated: 2022/10/17 09:36:50 by akoudia          ###   ########.fr        #
+#    Updated: 2022/10/20 14:18:22 by akoudia          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		= $(wildcard ft_*.c)
 
-SRCS_BONUS 	= $(wildcard ft_*_bonus.c)
+# SRCS_BONUS 	= $(wildcard ft_*_bonus.c)
 
 OBJS		= $(SRCS:.c=.o)
-OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
+# OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
 NAME		= libft.a
 
@@ -34,8 +34,8 @@ $(NAME):	$(OBJS)
 
 all:		$(NAME)
 
-bonus: 		$(NAME) $(OBJS_BONUS)
-			ar rcs $(NAME) $(OBJS_BONUS)
+# bonus: 		$(NAME) $(OBJS_BONUS)
+# 			ar rcs $(NAME) $(OBJS_BONUS)
 
 clean:
 			$(RM) $(OBJS) $(OBJS_BONUS)

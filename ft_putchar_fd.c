@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:22 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/09 09:05:53 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/20 16:22:29 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,14 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+/*
+#include <stdio.h>
+int main()
+{
+	int fd ;
+        fd = open("ft_putchar_fd.txt" , fd);
+        
+        ft_putchar_fd('a', 0);
+}
+*/
+Footer

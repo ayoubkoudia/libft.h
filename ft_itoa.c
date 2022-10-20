@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:28:19 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/17 09:25:13 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/20 16:21:56 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,3 +59,14 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+/*
+int main()
+{
+    char	*i1 = ft_itoa(-623);
+	char	*i2 = ft_itoa(156);
+	char	*i3 = ft_itoa(-0);
+        printf ("%d\n", strcmp(i1,"-623"));
+        printf ("%d\n", strcmp(i2,"156"));
+        printf ("%d\n", strcmp(i3,"0"));
+}
+*/
