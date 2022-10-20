@@ -6,26 +6,35 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:24:18 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/17 10:48:52 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/20 19:58:58 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ret;
+	char	*substring;
+	size_t	s_len;
 
-	if (s == 0)
-		return (0);
-	if (ft_strlen(s) < start)
-		len = 0;
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	ret = malloc(sizeof(char) * (len + 1));
-	if (ret == 0)
-		return (0);
-	ft_strlcpy(ret, s + start, len + 1);
-	return (ret);
+	s_len = len;
+	if (!s)
+		return (NULL);
+	if (s_len > ft_strlen(s))
+	{
+		substring = (char *)malloc((unsigned int) ft_strlen(s) + 1);
+		s_len = ft_strlen(s) - start;
+	}
+	else
+		substring = (char *)malloc(s_len + 1);
+	if (!substring)
+		return (NULL);
+	if (start >= ft_strlen(s))
+	{
+		substring[0] = '\0';
+		return (substring);
+	}
+	ft_memcpy(substring, s + start, s_len);
+	substring[s_len] = '\0';
+	return (substring);
 }

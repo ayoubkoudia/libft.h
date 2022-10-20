@@ -6,7 +6,7 @@
 /*   By: akoudia <akoudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:46:46 by akoudia           #+#    #+#             */
-/*   Updated: 2022/10/20 19:45:26 by akoudia          ###   ########.fr       */
+/*   Updated: 2022/10/20 19:59:36 by akoudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 // ---------- to delete libs------------------
 # include <string.h>
 # include <stdio.h>
-#include <fcntl.h>
+# include <fcntl.h>
 //-------------------------------------------
 typedef struct s_list
 {
