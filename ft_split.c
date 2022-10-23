@@ -58,16 +58,3 @@ char	**ft_split(char const *s, char c)
 	split[i] = 0;
 	return (split);
 }
-/*
-int main() 
-{
-	int i = 0;
-    char **test = ft_split("\0Hello\0World", '\0');
-    while(test[i])
-	{
-		printf("%s", test[i]);
-		i++;
-	}
-	return 0;
-}
-*/
